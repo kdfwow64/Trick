@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="flipclock.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+	<div class="jumbotron text-center">
+	  <h1>Demo Page</h1>
+	  <p>This page is responsive</p> 
+	</div>
+	
+	<div class="container">
+		  <!--Include a header DIV with the same name as the draggable DIV, followed by "header":-->
+	 
+	  <div class="row">
+	    <div class="col-sm-10">
+	    	<div class="row" id="failed_text"></div>
+	    	<div class="row">
+	    		<audio id="player" src="Kalimba.mp3"></audio>
+	    		<div class="audio-button">
+			        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+			    </div>
+			    <h3 class="main-question">Put 1 beetle in the picture.</h3>
+	    	</div>
+	        <div class="row duck-imgs" style="margin-left: 20px; border: 1px solid grey;border-radius: 2px;width: 700px;">
+	        	<div ondrop="drop(event)" ondragover="allowDrop(event)" style="background-image: url('back.png');border-bottom: 2px solid grey;width: 700px;height: 365px;" id="background_drop"></div>
+	        	<div class="row" style="margin-left: 12px;">
+			        <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					  <img src="fish_4_sticker_s.png" draggable="true" ondragstart="drag(event)" id="drag1" >
+					</div>
+			        <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					  <img src="fish_4_sticker_s.png" draggable="true" ondragstart="drag(event)" id="drag2" >
+					</div>
+					<div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					  <img src="fish_4_sticker_s.png" draggable="true" ondragstart="drag(event)" id="drag3" >
+					</div>
+			        <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					  <img src="fish_4_sticker_s.png" draggable="true" ondragstart="drag(event)" id="drag4" >
+					</div>
+			        <div class="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					  <img src="fish_4_sticker_s.png" draggable="true" ondragstart="drag(event)" id="drag5" >
+					</div>
+				</div>
+
+	        </div>
+	        <div class="row">
+	        	<button class="sbt">Submit</button>
+	        	<button class="got-it">Got it</button>
+	        </div>
+	        <div class="row explanation"><h1>Explanation</h1></div>
+	        <div class="row hidden-div">
+	        	<div class="review-div">
+	        		<img src="review.png" class="review-img">
+	        		<div class="row exp-top">
+			    		<audio id="player" src="Kalimba.mp3"></audio>
+			    		<div class="audio-button">
+					        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+					    </div>
+					    <h3 class="sub-question">How many five pence coins can you get for the pennies?</h3>
+			    	</div>
+
+			    	<div class="row"  style="margin-left: 40px;">
+				        <div class="col-sm-7">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+				        	<img src="pence.png">
+			        	</div>
+			        </div>
+			        <div class="row" style="margin-left: 80px;">
+			        	<h1 style="font-size: 40px;">= <input type="input" name="" style="background-color: #d8d8d8;width: 40px;" style="width: 40px;" disabled="true">
+			        	<img src="pence2.png"></h1>
+			        </div>
+
+	        		<div class="row exp-top">
+					    <h3 class="sub-question" style="color: #77a200;">You answered:</h3>
+			    	</div>
+	        		<h3><input type="input" name="" id="you_answered" disabled="true" value="" style="background-color: #d8d8d8;width: 40px;margin-left: 80px;"></h3>
+	        	</div>
+	        	<div class="review-div" style="margin-top: 15px;">
+	        		<img src="solve.png" class="review-img">
+	        		<div class="row" style="margin-left: 40px;">
+		        		<h3>First, count the pennies. There are 15 pennies. 15 pennies are worth 15p.</h3>
+
+		        		<h3>Next, work out how many five pence coins you need to make 15p. It takes 3 five pence coins to make 15p. </h3>
+		        		<h3>You can get <strong>3 five pence coins</strong> for the pennies.</h3>
+	        		</div>
+	        	</div>
+	        </div>
+	        <button class="got-it1">Got it</button>
+	    </div>
+	    <div class="col-sm-2">
+	      <div class="clock" style="margin:2em;zoom: 0.55;"></div>
+			<div class="message"></div>
+	    </div>
+	  </div>
+	  <div id="wonderful">
+	  	<i class="fa fa-check" style="font-size: 60px;color: green;float: left;"></i>
+	  	<h4 style="font-size: 60px;color: #00abff;    margin-top: 0px;"> Wonderful </h4>
+	  </div>
+	</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
+<script src="main.js"></script>
+<script src="flipclock.js"></script>
+</html>
+
+
+
+

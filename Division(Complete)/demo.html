@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="flipclock.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="jumbotron text-center">
+	  <h1>Write division sentences for arrays</h1>
+	</div>
+	
+	<div class="container">
+	  <div class="row">
+	    <div class="col-sm-10">
+	    	<div class="row" id="failed_text"></div>
+	    	<div class="row">
+	    		<audio id="player" src=""></audio>
+	    		<div class="audio-button">
+			        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+			    </div>
+			    <h3 class="main-question">Fill in the blanks to describe the array.</h3>
+			    <div class="row hidden-div first-top">
+			    	<h3>There are 6 dots divided into 2 equal rows.</h3>
+			    	<h3>There are <input type='input' name='first_input_div1' id='first_input_div1' style='width: 40px; background-color: #d8d8d8;' value='3' disabled> dots in each row.</h3>
+			    	<h3>So, 6 / 2 = <input type='input' name='second_input_div1' id='second_input_div1' style='width: 40px; background-color: #d8d8d8;' value='3' disabled='true'>.</h3>
+			    </div>
+	    	</div>
+	    	<div class="row duck-imgs" style="margin-left: 40px;">
+	    		<div class="row main-content">
+		    		<div class="row" style="border-radius: 15px;border: 2px solid grey; width: 200px;">
+		    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+		    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+		    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+		    		</div>
+		    		<div class="row" style="border-radius: 15px;border: 2px solid grey; width: 200px;margin-top: 5px;">
+		    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+		    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+		    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+		    		</div>
+		    	</div>
+	    		<div class="row" style="margin-top: 20px;">
+		    		<audio id="player" src=""></audio>
+		    		<div class="audio-button">
+				        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+				    </div>
+				    <h3 class="main-question f-sen">There are 6 dots divided into 2 equal rows.</h3>
+		    	</div>
+	    		<div class="row" style="margin-top: 10px;">
+		    		<audio id="player" src=""></audio>
+		    		<div class="audio-button">
+				        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+				    </div>
+				    <h3 class="main-question">There are <input type="input" name="first_input_div" id="first_input_div" style="width: 40px;"> dots in each row.</h3>
+		    	</div>
+	    		<div class="row" style="margin-top: 10px;">
+		    		<audio id="player" src=""></audio>
+		    		<div class="audio-button">
+				        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+				    </div>
+				    <h3 class="main-question divide-sen">So, 6 / 2 = <input type='input' name='second_input_div' id='second_input_div' style='width: 40px;'>.</h3>
+		    	</div>
+	    	</div>
+	        
+	    	
+	        <div class="row">
+	        	<button class="sbt">Submit</button>
+	        	<button class="got-it">Got it</button>
+	        </div>
+	        <div class="row explanation"><h1>Explanation</h1></div>
+	        <div class="row hidden-div">
+	        	<div class="review-div">
+	        		<img src="review.png" class="review-img">
+	        		<div class="row exp-top">
+			    		<audio id="player" src=""></audio>
+			    		<div class="audio-button">
+					        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+					    </div>
+					    <h3 class="sub-question">Fill in the blanks to describe the array.</h3>
+			    	</div>
+
+			    	
+
+
+			    	<div class="row" style="margin-left: 100px;">
+			    		<div class="row main-content">
+				    		<div class="row" style="border-radius: 15px;border: 2px solid grey; width: 200px;">
+				    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+				    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+				    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+				    		</div>
+				    		<div class="row" style="border-radius: 15px;border: 2px solid grey; width: 200px;margin-top: 5px;">
+				    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+				    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+				    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+				    		</div>
+				    	</div>
+			    		<div class="row" style="margin-top: 20px;">
+				    		<audio id="player" src=""></audio>
+				    		<div class="audio-button">
+						        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+						    </div>
+						    <h3 class="sub-question f-sen">There are 6 dots divided into 2 equal rows.</h3>
+				    	</div>
+			    		<div class="row" style="margin-top: 10px;">
+				    		<audio id="player" src=""></audio>
+				    		<div class="audio-button">
+						        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+						    </div>
+						    <h3 class="sub-question ">There are <input type="input" name="first_input_div2" id="first_input_div2" style="width: 40px;background-color: #d8d8d8;" disabled="true"> dots in each row.</h3>
+				    	</div>
+			    		<div class="row" style="margin-top: 10px;">
+				    		<audio id="player" src=""></audio>
+				    		<div class="audio-button">
+						        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+						    </div>
+						    <h3 class="sub-question last-sec">So, 6 ÷ 2 = <input type='input' name='second_input_div2' id='second_input_div2' style='width: 40px;background-color: #d8d8d8;' disabled='true'>.</h3>
+				    	</div>
+			    	</div>
+
+
+	        		<div class="row exp-top">
+					    <h3 style="color: #77a200;">You answered:</h3>
+					    <h3 class="f-sen" >There are 6 dots divided into 2 equal rows.</h3>
+					    <h3 class="s-sen">There are <input type='input' name='first_input_div3' id='first_input_div3' style='width: 40px;background-color: #d8d8d8;' disabled='true'> dots in each row.</h3>
+					    <h3 class="t-sen">So, 6 / 2 = <input type='input'  id='second_input_div3' style='width: 40px;background-color: #d8d8d8;' disabled='true'>.</h3>
+			    	</div>
+	        	</div>
+	        	<div class="review-div" style="margin-top: 15px;">
+	        		<img src="remember.png" class="review-img">
+	        		<h3 style="margin-left: 30px;">You can divide by making equal groups.</h3>
+	        		<h3 style="margin-left: 30px;">Each row in an array is an equal group.</h3>
+	        	</div>
+	        	<div class="review-div" style="margin-top: 15px;">
+	        		<img src="solve.png" class="review-img">
+	        		<h3 style="margin-left: 30px;" class="f-sen">The array has 6 dots divided into 2 equal rows.</h3>
+	        		<div class="row main-content" style="margin-left: 60px;">
+	        			<div class="row" style="border-radius: 15px;border: 2px solid grey; width: 200px;margin-top: 5px;margin-left: 50px;">
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    		</div>
+	        			<div class="row" style="border-radius: 15px;border: 2px solid grey; width: 200px;margin-top: 5px;margin-left: 50px;">
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    		</div>
+					</div>
+	        		<h3 style="margin-left: 30px;" class="r-sen">There are 3 dots in each row.</h3>
+	        		<div class="row main-descr">
+	        			<div class="row" style="border-radius: 15px;border: 2px solid grey; width: 200px;margin-top: 5px;margin-left: 50px;">
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    		</div>
+	        			<div class="row" style="width: 200px;margin-top: 5px;margin-left: 50px;opacity: 0.4;">
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    			<svg height='50' width='50' class='circle-3'><circle cx='25' cy='25' r='25' fill='#6252c1' /></svg>
+			    		</div>
+			    	</div>
+		    		<h3 style="margin-left: 30px;">A division number sentence that describes the array is:</h3>
+		    		<div class="row">
+		    			<h1 style="margin-left: 130px;font-size: 70px;" class="express">6 ÷ 2 = 3</h1>
+		    		</div>
+		    		<div class="row" style="margin-left: 68px;">
+		    			<div class="col-sm-2 div-col-2" style="text-align: center;">
+		    				<i class="	fa fa-long-arrow-up" style="font-size: 50px;color: grey;"></i>
+		    				<h4 style="text-align: center;">Total<br>number of<br>dots</h4>
+		    			</div>
+		    			<div class="col-sm-2 div-col-2" style="text-align: center;">
+		    				<i class="	fa fa-long-arrow-up" style="font-size: 50px;color: grey;"></i>
+		    				<h4 style="text-align: center;">Number<br>of rows</h4>
+		    			</div>
+		    			<div class="col-sm-2 div-col-2" style="text-align: center;">
+		    				<i class="	fa fa-long-arrow-up" style="font-size: 50px;color: grey;"></i>
+		    				<h4 style="text-align: center;">Number<br>of dots in<br>each row</h4>
+		    			</div>
+		    		</div>
+	        	</div>
+	        </div>
+	        <button class="got-it1">Got it</button>
+	    </div>
+	    <div class="col-sm-2">
+	      <div class="clock" style="margin:2em;zoom: 0.55;"></div>
+			<div class="message"></div>
+	    </div>
+	  </div>
+	  <div id="wonderful">
+	  	<i class="fa fa-check" style="font-size: 60px;color: green;float: left;"></i>
+	  	<h4 style="font-size: 60px;color: #00abff;    margin-top: 0px;"> Wonderful </h4>
+	  </div>
+	</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
+<script src="main.js"></script>
+<script src="flipclock.js"></script>
+</html>
+
+
+
+

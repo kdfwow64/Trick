@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="flipclock.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="jumbotron text-center">
+	  <h1>Demo Page</h1>
+	  <p>This page is responsive</p> 
+	</div>
+	
+	<div class="container">
+	  <div class="row">
+	    <div class="col-sm-10">
+	    	<div class="row" id="failed_text"></div>
+	    	<div class="row">
+	    		<audio id="player" src=""></audio>
+	    		<div class="audio-button">
+			        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+			    </div>
+			    <h3 class="main-question" style="width: 700px;">Copy the pattern.</h3>
+	    	</div>
+	    	
+	        <div class="row duck-imgs main-pro" style="margin-top: 20px;">
+	        	<svg width='50' height='50' style='margin-left: 30px;'>
+				  <circle cx='25' cy='25' r='25' fill='#61cffa' />
+				</svg>
+	        	<svg width='50' height='50' style='margin-left: 30px;'>
+				  <rect width='50' height='50' style='fill:rgb(0,0,255);' />
+				</svg>
+	        	<svg width='50' height='50' style='margin-left: 30px;'>
+				  <rect width='50' height='50' style='fill:rgb(0,0,255);' />
+				</svg>
+	        	<svg width='50' height='50' style='margin-left: 30px;'>
+				  <circle cx='25' cy='25' r='25' fill='#61cffa' />
+				</svg>
+	        	<svg width='50' height='50' style='margin-left: 30px;'>
+				  <rect width='50' height='50' style='fill:rgb(0,0,255);' />
+				</svg>
+	        	<svg width='50' height='50' style='margin-left: 30px;'>
+				  <circle cx='25' cy='25' r='25' fill='#61cffa' />
+				</svg>
+	        	<svg width='50' height='50' style='margin-left: 30px;'>
+				  <circle cx='25' cy='25' r='25' fill='#61cffa' />
+				</svg>
+	        	<svg width='50' height='50' style='margin-left: 30px;'>
+				  <circle cx='25' cy='25' r='25' fill='#61cffa' />
+				</svg>
+	        </div>
+
+
+	        <div class='row duck-imgs' style="margin-top: 20px;">
+	        	<div class="back-shape border-blue" style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+	        	</div>
+	        	<div class="back-shape" style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+	        	</div>
+	        	<div class="back-shape" style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+	        	</div>
+	        	<div class="back-shape" style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+	        	</div>
+	        	<div class="back-shape" style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+	        	</div>
+	        	<div class="back-shape" style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+	        	</div>
+	        	<div class="back-shape" style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+	        	</div>
+	        	<div class="back-shape" style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+	        	</div>
+	        </div>
+	        <div class="row duck-imgs" style="margin-top: 20px;">
+	        	<div  style="width: 70px;height: 70px;border-radius: 5px;margin-left: 15px;float: left;box-shadow: rgba(108, 108, 108, 0.56) 0px 3px 2px">
+
+		        	<div  style="width: 68px;height: 68px;border-radius: 5px;float: left;box-shadow: rgba(108, 108, 108, 0.56) 0px 3px 2px">
+		        		<div style="width: 66px;height: 66px;border-radius: 5px;box-shadow: rgba(108, 108, 108, 0.56) 0px 3px 2px;float: left;">
+
+		        			<div style="width: 64px;height: 64px;border-radius: 5px;box-shadow: rgba(108, 108, 108, 0.56) 0px 3px 2px;float: left;">
+				        		<div class="pattern-circle circle-svg">
+				        			<svg width="50" height="50" style="margin-left: 7px;margin-top: 7px;">
+									    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+									</svg>
+				        		</div>
+				        	</div>
+		        		</div>
+		        	</div>
+	        	</div>
+	        	<div  style="width: 70px;height: 70px;border-radius: 5px;margin-left: 15px;float: left;box-shadow: rgba(108, 108, 108, 0.56) 0px 3px 2px">
+	        		<div  style="width: 68px;height: 68px;border-radius: 5px;float: left;box-shadow: rgba(108, 108, 108, 0.56) 0px 3px 2px">
+		        		<div style="width: 66px;height: 66px;border-radius: 5px;box-shadow: rgba(108, 108, 108, 0.56) 0px 3px 2px;float: left;">
+		        			<div style="width: 64px;height: 64px;border-radius: 5px;box-shadow: rgba(108, 108, 108, 0.56) 0px 3px 2px;float: left;">
+				        		<div class="pattern-circle rect-svg">
+				        			<svg width="50" height="50" style="margin-left: 7px;margin-top: 7px;">
+									    <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+									</svg>
+				        		</div>
+				        	</div>
+		        		</div>
+		        	</div>
+	        	</div>
+	        </div>
+
+	        <div class="row hidden-div">
+	        	<div class="row" style="margin-top: 20px;">
+		        	<svg width="50" height="50" style="margin-left: 30px;">
+					  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+					</svg>
+		        	<svg width="50" height="50" style="margin-left: 30px;">
+					  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+					</svg>
+		        	<svg width="50" height="50" style="margin-left: 30px;">
+					  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+					</svg>
+		        	<svg width="50" height="50" style="margin-left: 30px;">
+					  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+					</svg>
+		        	<svg width="50" height="50" style="margin-left: 30px;">
+					  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+					</svg>
+		        	<svg width="50" height="50" style="margin-left: 30px;">
+					  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+					</svg>
+		        	<svg width="50" height="50" style="margin-left: 30px;">
+					  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+					</svg>
+		        	<svg width="50" height="50" style="margin-left: 30px;">
+					  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+					</svg>
+		        </div>
+
+
+		        <div class="row" style="margin-top: 20px;">
+		        	<div  class="normal" >
+		        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+						    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+		        	</div>
+		        	<div  class="normal" >
+		        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+						    <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+						</svg>
+		        	</div>
+		        	<div  class="normal" >
+		        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+						    <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+						</svg>
+		        	</div>
+		        	<div  class="normal" >
+		        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+						    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+		        	</div>
+		        	<div  class="normal" >
+		        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+						    <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+						</svg>
+		        	</div>
+		        	<div  class="normal" >
+		        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+						    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+		        	</div>
+		        	<div  class="normal" >
+		        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+						    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+		        	</div>
+		        	<div  class="normal" >
+		        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+						    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+		        	</div>
+		        </div>
+	        </div>
+	       
+	        <div class="row">
+	        	<button class="sbt">Submit</button>
+	        	<button class="got-it">Got it</button>
+	        </div>
+	        <div class="row explanation"><h1>Explanation</h1></div>
+	        <div class="row hidden-div">
+	        	<div class="review-div">
+	        		<img src="review.png" class="review-img">
+	        		<div class="row exp-top">
+			    		<audio id="player" src=""></audio>
+			    		<div class="audio-button">
+					        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+					    </div>
+					    <h3 class="sub-question" style="width: 872px;">Copy the pattern.</h3>
+			    	</div>
+
+		        	<div class="row" style="margin-top: 20px;margin-left: 40px;">
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+			        </div>
+
+
+			        <div class="row" style="margin-top: 20px;margin-left: 40px;">
+			        	<div  style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+			        	</div>
+			        	<div style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+			        	</div>
+			        	<div  style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+			        	</div>
+			        	<div style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+			        	</div>
+			        	<div style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+			        	</div>
+			        	<div style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+			        	</div>
+			        	<div  style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+			        	</div>
+			        	<div style="width: 70px;height: 70px;background-color: #d5f9fd;border-radius: 5px;margin-left: 15px;float: left;">
+			        	</div>
+			        </div>
+
+
+	        		<div class="row exp-top">
+					    <h3 class="sub-question" style="color: #77a200;">You answered:</h3>
+			    	</div>
+	        		<div class="row" style="margin-top: 20px;margin-left: 40px;">
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+			        	<svg width="50" height="50" style="margin-left: 30px;">
+						  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+						</svg>
+			        </div>
+
+
+			        <div class="row" style="margin-top: 20px;margin-left: 40px;">
+			        	<div  class="normal you-ans" >
+			        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+							    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+							</svg>
+			        	</div>
+			        	<div  class="normal you-ans" >
+			        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+							    <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+							</svg>
+			        	</div>
+			        	<div  class="normal you-ans" >
+			        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+							    <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+							</svg>
+			        	</div>
+			        	<div  class="normal you-ans" >
+			        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+							    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+							</svg>
+			        	</div>
+			        	<div  class="normal you-ans" >
+			        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+							    <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+							</svg>
+			        	</div>
+			        	<div  class="normal you-ans" >
+			        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+							    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+							</svg>
+			        	</div>
+			        	<div  class="normal you-ans" >
+			        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+							    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+							</svg>
+			        	</div>
+			        	<div  class="normal you-ans" >
+			        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+							    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+							</svg>
+			        	</div>
+			        </div>
+
+	        	</div>
+	        	<div class="review-div" style="margin-top: 15px;">
+	        		<img src="solve.png" class="review-img">
+	        		<div style="width: 100%;padding: 30px;">
+	        			<h3>Start on the left. Copy the shapes one by one.</h3>
+	        			
+	        			<div class="row" style="margin-top: 20px;margin-left: 40px;">
+				        	<svg width="50" height="50" style="margin-left: 30px;">
+							  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+							</svg>
+				        	<svg width="50" height="50" style="margin-left: 30px;">
+							  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+							</svg>
+				        	<svg width="50" height="50" style="margin-left: 30px;">
+							  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+							</svg>
+				        	<svg width="50" height="50" style="margin-left: 30px;">
+							  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+							</svg>
+				        	<svg width="50" height="50" style="margin-left: 30px;">
+							  <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+							</svg>
+				        	<svg width="50" height="50" style="margin-left: 30px;">
+							  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+							</svg>
+				        	<svg width="50" height="50" style="margin-left: 30px;">
+							  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+							</svg>
+				        	<svg width="50" height="50" style="margin-left: 30px;">
+							  <circle cx="25" cy="25" r="25" fill="#61cffa" />
+							</svg>
+				        </div>
+				        <div class="row" style="margin-left: 60px;margin-top: 20px;">
+				        	<div class="pattern-arrow">
+				        		<i class="fa fa-long-arrow-down" style="font-size: 50px;color: grey;"></i>
+				        	</div>
+				        	<div class="pattern-arrow">
+				        		<i class="fa fa-long-arrow-down" style="font-size: 50px;color: grey;"></i>
+				        	</div>
+				        	<div class="pattern-arrow">
+				        		<i class="fa fa-long-arrow-down" style="font-size: 50px;color: grey;"></i>
+				        	</div>
+				        	<div class="pattern-arrow">
+				        		<i class="fa fa-long-arrow-down" style="font-size: 50px;color: grey;"></i>
+				        	</div>
+				        	<div class="pattern-arrow">
+				        		<i class="fa fa-long-arrow-down" style="font-size: 50px;color: grey;"></i>
+				        	</div>
+				        	<div class="pattern-arrow">
+				        		<i class="fa fa-long-arrow-down" style="font-size: 50px;color: grey;"></i>
+				        	</div>
+				        	<div class="pattern-arrow">
+				        		<i class="fa fa-long-arrow-down" style="font-size: 50px;color: grey;"></i>
+				        	</div>
+				        	<div class="pattern-arrow">
+				        		<i class="fa fa-long-arrow-down" style="font-size: 50px;color: grey;"></i>
+				        	</div>
+				        </div>
+
+				        <div class="row" style="margin-top: 20px;margin-left: 40px;">
+				        	<div  class="normal" >
+				        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+								    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+								</svg>
+				        	</div>
+				        	<div  class="normal" >
+				        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+								    <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+								</svg>
+				        	</div>
+				        	<div  class="normal" >
+				        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+								    <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+								</svg>
+				        	</div>
+				        	<div  class="normal" >
+				        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+								    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+								</svg>
+				        	</div>
+				        	<div  class="normal" >
+				        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+								    <rect width="50" height="50" style="fill:rgb(0,0,255);" />
+								</svg>
+				        	</div>
+				        	<div  class="normal" >
+				        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+								    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+								</svg>
+				        	</div>
+				        	<div  class="normal" >
+				        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+								    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+								</svg>
+				        	</div>
+				        	<div  class="normal" >
+				        		<svg width="50" height="50" style="margin-left: 10px;margin-top: 10px;">
+								    <circle cx="25" cy="25" r="25" fill="#61cffa" />
+								</svg>
+				        	</div>
+				        </div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <button class="got-it1">Got it</button>
+	    </div>
+	    <div class="col-sm-2">
+	      <div class="clock" style="margin:2em;zoom: 0.55;"></div>
+			<div class="message"></div>
+	    </div>
+	  </div>
+	  <div id="wonderful">
+	  	<i class="fa fa-check" style="font-size: 60px;color: green;float: left;"></i>
+	  	<h4 style="font-size: 60px;color: #00abff;    margin-top: 0px;"> Wonderful </h4>
+	  </div>
+	</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
+<script src="main.js"></script>
+<script src="flipclock.js"></script>
+</html>
+
+
+
+

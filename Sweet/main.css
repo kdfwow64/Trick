@@ -1,0 +1,95 @@
+.flower img{
+	position: absolute;
+	left: 15px;
+}
+.flower {
+	height: 235px;
+	background: url(images/background.png) no-repeat 15px 0px;
+}
+.success-div {
+	position: absolute;
+	top: 315px;
+    left: 300px;
+	display: none;
+}
+.flower-number1 {
+	font-size: 35px;
+	color: #462ad6;
+	position: absolute;
+    letter-spacing: -4px;
+}
+.flower-number2 {
+	font-size: 35px;
+	color: #3d560d;
+    letter-spacing: -4px;
+	position: absolute;
+}
+
+
+.flower-select-num1 {
+	font-size: 35px;
+	font-weight: 800;
+    color: #ef0a7c;
+    letter-spacing: -7px;
+	position: absolute;
+}
+.flower-select-num1:hover {
+	cursor: pointer;
+}
+
+.flower-select-num2 {
+	font-size: 35px;
+	font-weight: 800;
+    color: #0a0fef;
+    letter-spacing: -7px;
+	position: absolute;
+}
+.flower-select-num2:hover {
+	cursor: pointer;
+}
+
+.question-tag1:hover {
+	cursor: pointer;
+}
+.question-tag2:hover {
+	cursor: pointer;
+}
+.question-tag1 {
+	font-size: 39px;
+	position: absolute;
+	color: #ff00c6;
+}
+@keyframes example {
+    0% {color: #ff00c6;}
+    25% {color: red;}
+    50% {color: green;}
+    100% {color: #ff00c6;}
+}
+
+.question-tag2 {
+	font-size: 39px;
+	color: blue;
+ /*   animation: example1 4s infinite;*/
+	position: absolute;
+}
+
+
+@keyframes example1 {
+    0% {color: blue;}
+    25% {color: pink;}
+    50% {color: white;}
+    100% {color: blue;}
+}
+
+.sbt {
+	margin-top: 30px;
+	width: 135px;
+	height: 35px;
+	color: white;
+	border: none;
+	background-color: #7ebb00;
+	border-radius: 5px;
+}
+.sbt:hover {
+	background-color: #9de20e;
+}

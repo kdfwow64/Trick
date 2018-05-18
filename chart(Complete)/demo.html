@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="flipclock.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="jumbotron text-center">
+	  <h1>Interpret Bar Graphs</h1>
+	</div>
+	
+	<div class="container">
+	  <div class="row">
+	    <div class="col-sm-8">
+	    	<div class="col-sm-12">
+	    	<div class="row" id="failed_text"></div>
+	    	<div class="row">
+	    		<audio id="player" src=""></audio>
+	    		<div class="audio-button">
+			        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+			    </div>
+			    <h3 class="main-question main-one" style="width: 700px;">Anne went to a bird refuge and saw some eagles, parrots, penguins,  and ducks. She made a bar graph of the birds at the refuge:</h3>
+	    	</div>
+
+	    	<div class="row hidden-div correct-answer">
+	    		<div class="row">
+				    <div class="col-sm-6 margin-sm" style="text-align: center;">
+		        		<div style="width: 100%;height: 60px;border: solid 2px #0b94e0; border-radius: 6px;background-color: #ddf6ff;">
+		        			<img src="Duck.gif" style="margin-right: 10px;float: left; margin-left: 44px;">
+		        			<h3 style="float: left;">Duck</h3>
+			        	</div>
+		        	</div>
+		        </div>
+			    <div class="row" style="margin-top: 13px;">
+				    <div class="col-sm-6 margin-sm" style="text-align: center;">
+		        		<div style="opacity: 0.5;width: 100%;height: 60px;border: solid 2px #bbf1ee; border-radius: 6px;;">
+		        			<img src="Penguin.gif" style="margin-right: 10px;float: left; margin-left: 44px;">
+		        			<h3 style="float: left;">Penguin</h3>
+			        	</div>
+		        	</div>
+		        </div>
+	    	</div>
+	        <div class="row duck-imgs problem-pic">
+	        	<div class="col-sm-8">
+	        		<img src="birds.png" class="back-image">
+	        	</div>
+	        	<div class="col-sm-4">
+	        		<div style="margin-top: 40px;    box-shadow: 0 1px 17px 0 rgb(195, 183, 197), 0 -3px 25px 0 rgb(184, 133, 228);width: 190px;height: 200px;border: solid 1px grey;">
+	        			<div class="row" style="padding-left: 16px;">
+	        				<img src="Eagle.gif" style="float: left;margin-right: 10px;">
+	        				<audio id="player" src=""></audio>
+	        				<div style="margin-top: 10px;">
+					    		<div class="audio-button" style="width: 31px !important;">
+							        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+							    </div>
+							    <h3 class="sub-question">Eagle</h3>
+							</div>
+	        			</div>
+	        			<div class="row" style="padding-left: 16px;">
+	        				<img src="Parrot.gif" style="float: left;margin-right: 10px;">
+	        				<audio id="player" src=""></audio>
+	        				<div style="margin-top: 10px;">
+					    		<div class="audio-button" style="width: 31px !important;">
+							        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+							    </div>
+							    <h3 class="sub-question">Parrot</h3>
+							</div>
+	        			</div>
+	        			<div class="row" style="    padding-left: 16px;">
+	        				<img src="Penguin.gif" style="float: left;margin-right: 10px;">
+	        				<audio id="player" src=""></audio>
+	        				<div style="margin-top: 10px;">
+					    		<div class="audio-button" style="width: 31px !important;">
+							        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+							    </div>
+							    <h3 class="sub-question">Penguin</h3>
+							</div>
+	        			</div>
+	        			<div class="row" style="    padding-left: 16px;">
+	        				<img src="Duck.gif" style="float: left;margin-right: 10px;">
+	        				<audio id="player" src=""></audio>
+	        				<div style="margin-top: 10px;">
+					    		<div class="audio-button" style="width: 31px !important;">
+							        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+							    </div>
+							    <h3 class="sub-question">Duck</h3>
+							</div>
+	        			</div>	
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="row duck-imgs">
+	        	<audio id="player" src=""></audio>
+				<div style="margin-top: 10px;">
+		    		<div class="audio-button" style="width: 31px !important;">
+				        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+				    </div>
+				    <h3 class="main-question sub-one">Which bird did she see more of, ducks or penguins?</h3>
+				</div>
+	        </div>
+	        <div class="row duck-imgs in-pattern">
+	        	<audio id="player" src=""></audio>
+				<div style="margin-top: 10px;">
+		    		<div class="audio-button" style="width: 31px !important;margin-top: 14px;">
+				        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+				    </div>
+				    <div class="row">
+					    <div class="col-sm-6 margin-sm" style="text-align: center;">
+			        		<div class="res " style="width: 100%;height: 60px;border: solid 2px #bbf1ee; border-radius: 6px;">
+			        			<img src="Duck.gif" style="margin-right: 10px;float: left; margin-left: 44px;">
+			        			<h3 style="float: left;">Duck</h3>
+				        	</div>
+			        	</div>
+			        </div>
+				    <div class="row" style="margin-top: 13px;">
+					    <div class="col-sm-6 margin-sm" style="text-align: center;">
+			        		<div class="res" style="width: 100%;height: 60px;border: solid 2px #bbf1ee; border-radius: 6px;margin-left: 46px;">
+			        			<img src="Penguin.gif" style="margin-right: 10px;float: left; margin-left: 44px;">
+			        			<h3 style="float: left;">Penguin</h3>
+				        	</div>
+			        	</div>
+			        </div>
+				</div>
+	        </div>
+
+	        <div class="row">
+	        	<button class="sbt">Submit</button>
+	        	<button class="got-it">Got it</button>
+	        </div>
+	        <div class="row explanation"><h1>Explanation</h1></div>
+	        <div class="row hidden-div">
+	        	<div class="review-div">
+	        		<img src="review.png" class="review-img">
+
+	        		<div class="row" style="padding-left: 65px;margin-top: 23px;">
+	        			<div class="row">
+				    		<audio id="player" src=""></audio>
+				    		<div class="audio-button">
+						        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+						    </div>
+						    <h3 class="sub-question main-one" style="width: 700px;">Anne went to a bird refuge and saw some eagles, parrots, penguins,  and ducks. She made a bar graph of the birds at the refuge:</h3>
+				    	</div>
+				    	
+				        <div class="row">
+				        	<div class="col-sm-8">
+				        		<img src="birds.png" class="back-image">
+				        	</div>
+				        	<div class="col-sm-4 sub-main">
+				        		<div style="    margin-top: 40px;width: 190px;height: 200px;border: solid 1px grey;">
+				        			<div class="row" style="    padding-left: 16px;">
+				        				<img src="Eagle.gif" style="float: left;margin-right: 10px;">
+				        				<audio id="player" src=""></audio>
+				        				<div style="margin-top: 10px;">
+								    		<div class="audio-button" style="width: 31px !important;">
+										        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+										    </div>
+										    <h3 class="sub-question">Eagle</h3>
+										</div>
+				        			</div>
+				        			<div class="row" style="    padding-left: 16px;">
+				        				<img src="Parrot.gif" style="float: left;margin-right: 10px;">
+				        				<audio id="player" src=""></audio>
+				        				<div style="margin-top: 10px;">
+								    		<div class="audio-button" style="width: 31px !important;">
+										        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+										    </div>
+										    <h3 class="sub-question">Parrot</h3>
+										</div>
+				        			</div>
+				        			<div class="row" style="    padding-left: 16px;">
+				        				<img src="Penguin.gif" style="float: left;margin-right: 10px;">
+				        				<audio id="player" src=""></audio>
+				        				<div style="margin-top: 10px;">
+								    		<div class="audio-button" style="width: 31px !important;">
+										        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+										    </div>
+										    <h3 class="sub-question">Penguin</h3>
+										</div>
+				        			</div>
+				        			<div class="row" style="    padding-left: 16px;">
+				        				<img src="Duck.gif" style="float: left;margin-right: 10px;">
+				        				<audio id="player" src=""></audio>
+				        				<div style="margin-top: 10px;">
+								    		<div class="audio-button" style="width: 31px !important;">
+										        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+										    </div>
+										    <h3 class="sub-question">Duck</h3>
+										</div>
+				        			</div>	
+				        		</div>
+				        	</div>
+				        </div>
+				        <div class="row">
+				        	<audio id="player" src=""></audio>
+							<div style="margin-top: 10px;">
+					    		<div class="audio-button" style="width: 31px !important;">
+							        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+							    </div>
+							    <h3 class="sub-question sub-one">Which bird did she see more of, ducks or penguins?</h3>
+							</div>
+				        </div>
+				        <div class="row origin">
+				        	<audio id="player" src=""></audio>
+							<div style="margin-top: 10px;">
+					    		<div class="audio-button" style="width: 31px !important;margin-top: 14px;">
+							        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+							    </div>
+							    <div class="row">
+								    <div class="col-sm-6 margin-sm" style="text-align: center;">
+						        		<div style="width: 100%;height: 60px;border: solid 2px #bbf1ee; border-radius: 6px;">
+						        			<img src="Duck.gif" style="margin-right: 10px;float: left; margin-left: 44px;">
+						        			<h3 style="float: left;">Duck</h3>
+							        	</div>
+						        	</div>
+						        </div>
+							    <div class="row" style="margin-top: 13px;">
+								    <div class="col-sm-6 margin-sm" style="text-align: center;">
+						        		<div style="width: 100%;height: 60px;border: solid 2px #bbf1ee; border-radius: 6px;margin-left: 46px;">
+						        			<img src="Penguin.gif" style="margin-right: 10px;float: left; margin-left: 44px;">
+						        			<h3 style="float: left;">Penguin</h3>
+							        	</div>
+						        	</div>
+						        </div>
+							</div>
+				        </div>
+				        <h3 style="color: #63d220;">You answered:</h3>
+				        <div class="row pro-ans">
+					        <div class="row">
+							    <div class="col-sm-6 margin-sm" style="text-align: center;">
+					        		<div class="you-answered" style="width: 100%;height: 60px;border: solid 2px #bbf1ee; border-radius: 6px;">
+					        			<img src="Duck.gif" style="margin-right: 10px;float: left; margin-left: 44px;">
+					        			<h3 style="float: left;">Duck</h3>
+						        	</div>
+					        	</div>
+					        </div>
+						    <div class="row" style="margin-top: 13px;">
+							    <div class="col-sm-6 margin-sm" style="text-align: center;">
+					        		<div class="you-answered"  style="width: 100%;height: 60px;border: solid 2px #bbf1ee; border-radius: 6px;">
+					        			<img src="Penguin.gif" style="margin-right: 10px;float: left; margin-left: 44px;">
+					        			<h3 style="float: left;">Penguin</h3>
+						        	</div>
+					        	</div>
+					        </div>
+					    </div>
+					</div>
+
+
+
+
+	        	</div>
+	        	<div class="review-div" style="margin-top: 15px;">
+	        		<img src="solve.png" class="review-img">
+	        		<div style="width: 100%;padding: 30px;">
+	        			<h3 class="solve-1">Find the bar for ducks. Now find the line where the bar for ducks ends. The bar for ducks ends at 8. She saw 8 ducks. </h3>
+	        			<h3 class="solve-2" style="margin-top: 40px;">Find the bar for penguins. Now find the line where the bar for penguins ends. The bar for penguins ends at 2. She saw 2 penguins. </h3>
+	        			
+	        			<h3 class="solve-3">8 is more than 2. She saw more ducks.</h3>
+	        		</div>
+	        	</div>
+	        </div>
+	        <button class="got-it1">Got it</button>
+	    </div>
+	    </div>
+	    <div class="col-sm-2"></div>
+	    <div class="col-sm-2 ">
+	    	<div class="row">
+	    		<div class="question-info-header" style="background-color: #10ec10;">
+	    			<span class="question-info-h3"><strong>Questions</strong> answered</span>
+	    		</div>
+	    		<div class="question-info-content">
+	    			<span class="question-info-h2">0</span>
+	    		</div>
+	    	</div>
+	    	<div class="row">
+	    		<div class="question-info-header" style="background-color: #14c9ff;">
+	    			<span class="question-info-h3"><strong>Time</strong><br> elapsed</span>
+	    		</div>
+	    		<div class="question-info-content">
+	    			<div class="clock" style="margin: 0 2.5em;zoom: 0.35;padding-top: 68px;"></div>
+					<div class="message"></div>
+	    		</div>
+			</div>
+			<div class="row">
+	    		<div class="question-info-header" style="background-color: #f56949;">
+	    			<span class="question-info-h3"><strong>SmartScore</strong><br> out of 100 <i class="fa fa-question-circle"></i></span>
+	    		</div>
+	    		<div class="question-info-content">
+	    			<span class="question-info-h2">0</span>
+	    		</div>
+	    	</div>
+	    </div>
+	  </div>
+	  <div id="wonderful">
+	  	<i class="fa fa-check" style="font-size: 60px;color: green;float: left;"></i>
+	  	<h4 style="font-size: 60px;color: #00abff;    margin-top: 0px;"> Wonderful </h4>
+	  </div>
+<!--	  <img src="Untitled-1.png" class="ballon"> -->
+	</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
+<script src="main.js"></script>
+<script src="flipclock.js"></script>
+</html>

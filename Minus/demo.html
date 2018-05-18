@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="flipclock.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="jumbotron text-center">
+	  <h1>Demo Page</h1>
+	  <p>This page is responsive</p> 
+	</div>
+	
+	<div class="container">
+	  <div class="row">
+	    <div class="col-sm-10">
+	    	<div class="row" id="failed_text"></div>
+	    	<div class="row">
+	    		<audio id="player" src="Kalimba.mp3"></audio>
+	    		<div class="audio-button">
+			        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+			    </div>
+			    <h3 class="main-question" style="width: 700px;">There were a total of 5 tadpoles in a pond. One afternoon, Linda caught 4 tadpoles from the pond and took them home. How many tadpoles were left in the pond?</h3>
+	    	</div>
+	    	
+	        <div class="row duck-imgs">
+	        	<div class="col-sm-2 margin-sm" style="margin-left: 40px;text-align: center;">
+	        		<div class="res" style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+	        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">3</span></div>
+	        	</div>
+	        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+	        		<div class="res" style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+	        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">1</span></div>
+	        	</div>
+	        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+	        		<div class="res" style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+	        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">4</span></div>
+	        	</div>
+	        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+	        		<div class="res" style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+	        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">2</span></div>
+	        	</div>
+	        	
+	        </div>
+
+	        <div class="row hidden-div">
+	        	<div class="col-sm-2 margin-sm" style="margin-left: 40px;text-align: center;">
+	        		<div style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+	        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">3</span></div>
+	        	</div>
+	        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+	        		<div style="width: 100%;height: 50px;border: solid 2px blue;background-color: #0ad6f7; border-radius: 6px;">
+	        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">1</span></div>
+	        	</div>
+	        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+	        		<div style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+	        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">4</span></div>
+	        	</div>
+	        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+	        		<div style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+	        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">2</span></div>
+	        	</div>
+	        </div>
+	       
+	        <div class="row">
+	        	<button class="sbt">Submit</button>
+	        	<button class="got-it">Got it</button>
+	        </div>
+	        <div class="row explanation"><h1>Explanation</h1></div>
+	        <div class="row hidden-div">
+	        	<div class="review-div">
+	        		<img src="review.png" class="review-img">
+	        		<div class="row exp-top">
+			    		<audio id="player" src="Kalimba.mp3"></audio>
+			    		<div class="audio-button">
+					        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+					    </div>
+					    <h3 class="sub-question" style="width: 872px;">There were a total of 5 tadpoles in a pond. One afternoon, Liam caught 4 tadpoles from the pond and took them home. How many tadpoles were left in the pond?</h3>
+			    	</div>
+
+			    	<div class="row">
+			        	<div class="col-sm-2 margin-sm" style="margin-left: 85px;text-align: center;">
+			        		<div style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+			        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">3</span></div>
+			        	</div>
+			        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+			        		<div style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+			        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">1</span></div>
+			        	</div>
+			        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+			        		<div style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+			        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">4</span></div>
+			        	</div>
+			        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+			        		<div style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+			        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">2</span></div>
+			        	</div>
+			        </div>
+
+
+	        		<div class="row exp-top">
+					    <h3 class="sub-question" style="color: #77a200;">You answered:</h3>
+			    	</div>
+	        		<div class="row">
+			        	<div class="col-sm-2 margin-sm" style="margin-left: 85px;text-align: center;">
+			        		<div class="you-answered" style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+			        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">3</span></div>
+			        	</div>
+			        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+			        		<div class="you-answered" style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+			        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">1</span></div>
+			        	</div>
+			        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+			        		<div class="you-answered"  style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+			        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">4</span></div>
+			        	</div>
+			        	<div class="col-sm-2 margin-sm" style="margin-left: 20px;text-align: center;">
+			        		<div class="you-answered"  style="width: 100%;height: 50px;border: solid 2px #bbf1ee; border-radius: 6px;">
+			        			<span style="    font-size: 25px;float: left; margin-top: 7px;margin-left: calc(50% - 5px);">2</span></div>
+			        	</div>
+			        </div>
+	        	</div>
+	        	<div class="review-div" style="margin-top: 15px;">
+	        		<img src="solve.png" class="review-img">
+	        		<div style="width: 100%;padding: 30px;">
+	        			<h3>Subtract the number of tadpoles taken home from the total number of tadpoles.</h3>
+	        			<h3 style="margin-top: 40px;">Subtract:</h3>
+	        			<table style="font-size: 25px; margin-left: 64px;">
+	        				<tbody>
+	        					<tr>
+	        						<td style="width: 10px;"> </td>
+	        						<td></td>
+	        						<td>5</td>
+	        					</tr>
+	        					<tr>
+	        						<td> </td>
+	        						<td>-</td>
+	        						<td>4</td>
+	        					</tr>
+	        					<tr>
+	        						<td style="    border-bottom: solid 1px;"></td>
+	        						<td style="    border-bottom: solid 1px;"></td>
+	        						<td style="    border-bottom: solid 1px;"></td>
+	        					</tr>
+	        				</tbody>
+	        			</table>
+	        			<h3>You can count backwards to subtract. Start from 5 and count back 4.</h3>
+	        			<div style="width: 100%;padding-left: 20px;">
+	        				<h3>5, 4, 3, 2, 1</h3>
+	        				<table style="font-size: 25px; margin-left: 30px;">
+		        				<tbody>
+		        					<tr>
+		        						<td style="width: 10px;"> </td>
+		        						<td></td>
+		        						<td>5</td>
+		        					</tr>
+		        					<tr>
+		        						<td></td>
+		        						<td>-</td>
+		        						<td>4</td>
+		        					</tr>
+		        					<tr>
+		        						<td style="    border-bottom: solid 1px;"></td>
+		        						<td style="    border-bottom: solid 1px;"></td>
+		        						<td style="    border-bottom: solid 1px;"></td>
+		        					</tr>
+		        					<tr>
+		        						<td></td>
+		        						<td></td>
+		        						<td>1</td>
+		        					</tr>
+		        				</tbody>
+		        			</table>
+	        			</div>
+	        			<h3>The difference is 1. There was 1 tadpole left in the pond.</h3>
+	        		</div>
+	        	</div>
+	        </div>
+	        <button class="got-it1">Got it</button>
+	    </div>
+	    <div class="col-sm-2">
+	      <div class="clock" style="margin:2em;zoom: 0.55;"></div>
+			<div class="message"></div>
+	    </div>
+	  </div>
+	  <div id="wonderful">
+	  	<i class="fa fa-check" style="font-size: 60px;color: green;float: left;"></i>
+	  	<h4 style="font-size: 60px;color: #00abff;    margin-top: 0px;"> Wonderful </h4>
+	  </div>
+	</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
+<script src="main.js"></script>
+<script src="flipclock.js"></script>
+</html>
+
+
+
+

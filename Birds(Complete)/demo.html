@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="flipclock.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="jumbotron text-center">
+	  <h1> Learn to skip-count by twos, fives and tens</h1>
+	</div>
+	
+	<div class="container">
+	  <div class="row">
+	    <div class="col-sm-10">
+	    	<div class="row" id="failed_text"></div>
+	    	<div class="row">
+	    		<audio id="player" src=""></audio>
+	    		<div class="audio-button">
+			        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+			    </div>
+			    <h3 class="main-question main-qu">Count by 5s. Click each group of birds to keep track as you count.</h3>
+	    	</div>
+	    	<div class="duck-correct-num"><input type="input" name="" value="15" style="width: 40px;background-color: #d8d8d8; font-size: 22px;" disabled></div>
+	        <div class="row duck-imgs">
+	        	<div class="col-sm-3">
+	        		<img src="birds.svg" class="duck-class">	
+	        	</div>
+	        	<div class="col-sm-3">
+	        		<img src="birds.svg" class="duck-class">
+	        	</div>
+	        	<div class="col-sm-3">
+	        		<img src="birds.svg" class="duck-class">
+	        	</div>
+	        </div>
+	        <div class="row duck-imgs">
+	    		<audio id="player" src=""></audio>
+	    		<div class="audio-button">
+			        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+			    </div>
+			    <h3 class="second-question sub-qu">How many birds are there?</h3>
+	    	</div>
+	    	<div class="row duck-imgs">
+	    		<input type="input" id="bird_answer" name="bird_answer" style="width: 45px;margin-left: 40px;">
+	    	</div>
+	        <div class="row">
+	        	<button class="sbt">Submit</button>
+	        	<button class="got-it">Got it</button>
+	        </div>
+	        <div class="row explanation"><h1>Explanation</h1></div>
+	        <div class="row hidden-div">
+	        	<div class="review-div">
+	        		<img src="review.png" class="review-img">
+	        		<div class="row exp-top">
+			    		<audio id="player" src=""></audio>
+			    		<div class="audio-button">
+					        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+					    </div>
+					    <h3 class="sub-question main-qu">Count by 5s. Click each group of birds to keep track as you count.</h3>
+			    	</div>
+
+			    	<div class="row" style="margin-left: 20px;">
+			        	<div class="col-sm-3">
+			        		<img src="birds.svg" class="duck-disable-class">
+			        		
+			        	</div>
+			        	<div class="col-sm-3">
+			        		<img src="birds.svg" class="duck-disable-class">
+			        	</div>
+			        	<div class="col-sm-3">
+			        		<img src="birds.svg" class="duck-disable-class">
+			        	</div>
+			        </div>
+
+	        		<div class="row exp-top">
+			    		<audio id="player" src=""></audio>
+			    		<div class="audio-button">
+					        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+					    </div>
+					    <h3 class="second-question sub-qu">How many birds are there?</h3>
+			    	</div>
+			    	<div class="row" style="margin-left: 20px;">
+			    		<input type="input" name="" style="background-color: #d8d8d8; width: 40px;margin-left: 20px;" disabled>
+			    	</div>
+
+
+
+	        		<div class="row exp-top">
+					    <h3 class="sub-question" style="color: #77a200;">You answered:</h3>
+			    	</div>
+	        		<input type="input" name="" id="you_answered" value="" style="width: 40px;background-color: #d8d8d8; font-size: 22px; margin-left: 20px;" disabled>
+	        	</div>
+	        	<div class="review-div" style="margin-top: 15px;">
+	        		<img src="solve.png" class="review-img">
+	        		<h3 style="margin-left: 30px;">Count by 5s.</h3>
+	        		<div class="row" style="margin-left: 20px;">
+			        	<div class="col-sm-3">
+			        		<img src="birds.svg" class="duck-disable-class" style="opacity: 0.3;">
+			        		<svg height='60' width='60' class='duck-num' ><circle cx='30' cy='30' r='30' fill='#6252c1' /><span class='duck-real-num1'>5</span></svg>
+			        	</div>
+			        	<div class="col-sm-3">
+			        		<img src="birds.svg" class="duck-disable-class" style="opacity: 0.3;">
+			        		<svg height='60' width='60' class='duck-num' ><circle cx='30' cy='30' r='30' fill='#6252c1' /><span class='duck-real-num'>10</span></svg>
+			        	</div>
+			        	<div class="col-sm-3">
+			        		<img src="birds.svg" class="duck-disable-class" style="opacity: 0.3;">
+			        		<img src="cardinal-star.svg" class="cardinal-class">
+			        		<span class='duck-real-num'>15</span>
+			        	</div>
+			        </div>
+			        <span style="font-size: 25px;margin-left: 35px;" class="bottom-ans">There are 15 birds.</span>
+	        	</div>
+	        </div>
+	        <button class="got-it1">Got it</button>
+	    </div>
+	    <div class="col-sm-2">
+	      <div class="clock" style="margin:2em;zoom: 0.55;"></div>
+			<div class="message"></div>
+	    </div>
+	  </div>
+	  <div id="wonderful">
+	  	<i class="fa fa-check" style="font-size: 60px;color: green;float: left;"></i>
+	  	<h4 style="font-size: 60px;color: #00abff;    margin-top: 0px;"> Wonderful </h4>
+	  </div>
+	</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
+<script src="main.js"></script>
+<script src="flipclock.js"></script>
+</html>
+
+
+
+

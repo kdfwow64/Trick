@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="flipclock.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="jumbotron text-center">
+	  <h1>Demo Page</h1>
+	  <p>This page is responsive</p> 
+	</div>
+	
+	<div class="container">
+	  <div class="row">
+	    <div class="col-sm-10">
+	    	<div class="row" id="failed_text"></div>
+	    	<div class="row">
+	    		<audio id="player" src="Kalimba.mp3"></audio>
+	    		<div class="audio-button">
+			        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+			    </div>
+			    <h3 class="main-question">Count the ducks. Click each duck to keep track as you count.</h3>
+	    	</div>
+	    	<div class="duck-correct-num">3</div>
+	        <div class="row duck-imgs">
+	        	<div class="col-sm-3">
+	        		<img src="duck.svg" class="duck-class">
+	        		
+	        	</div>
+	        	<div class="col-sm-3">
+	        		<img src="duck.svg" class="duck-class">
+	        	</div>
+	        	<div class="col-sm-3">
+	        		<img src="duck.svg" class="duck-class">
+	        	</div>
+	        </div>
+	        <div class="row duck-imgs">
+	    		<audio id="player" src="Kalimba.mp3"></audio>
+	    		<div class="audio-button">
+			        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+			    </div>
+			    <h3 class="second-question">How many ducks are there?</h3>
+	    	</div>
+	    	<div class="row duck-imgs">
+	    		<div class="col-sm-2 duck-col-2">
+	        		<svg width="77" height="77" focusable="false"><path d="M 8 8 q 30.5 -10.766666666666666 61 0 M 8 69 q 30.5 10.766666666666666 61 0 M 8 8 q -10.766666666666666 30.5 0 61 M 69 8 q 10.766666666666666 30.5 0 61" fill="none" stroke="none" stroke-width="2"></path><g fill="#14beff" stroke-width="1"><rect x="8" y="8" rx="5.3" ry="5.3" width="61" height="61"></rect><path d="M 11.533333333333333 8 q 26.96666666666667 -9 53.93333333333334 0 M 11.533333333333333 69 q 26.96666666666667 9 53.93333333333334 0 M 8 11.533333333333333 q -9 26.96666666666667 0 53.93333333333334 M 69 11.533333333333333 q 9 26.96666666666667 0 53.93333333333334"></path></g></svg>
+	        		<span class="count-num">1</span>
+	    		</div>
+	    		<div class="col-sm-2 duck-col-2">
+	        		<svg width="77" height="77" focusable="false"><path d="M 8 8 q 30.5 -10.766666666666666 61 0 M 8 69 q 30.5 10.766666666666666 61 0 M 8 8 q -10.766666666666666 30.5 0 61 M 69 8 q 10.766666666666666 30.5 0 61" fill="none" stroke="none" stroke-width="2"></path><g fill="#14beff"  stroke-width="1"><rect x="8" y="8" rx="5.3" ry="5.3" width="61" height="61"></rect><path d="M 11.533333333333333 8 q 26.96666666666667 -9 53.93333333333334 0 M 11.533333333333333 69 q 26.96666666666667 9 53.93333333333334 0 M 8 11.533333333333333 q -9 26.96666666666667 0 53.93333333333334 M 69 11.533333333333333 q 9 26.96666666666667 0 53.93333333333334"></path></g></svg>
+	        		<span class="count-num">2</span>
+	    		</div>
+	    		<div class="col-sm-2 duck-col-2">
+	        		<svg width="77" height="77" focusable="false"><path d="M 8 8 q 30.5 -10.766666666666666 61 0 M 8 69 q 30.5 10.766666666666666 61 0 M 8 8 q -10.766666666666666 30.5 0 61 M 69 8 q 10.766666666666666 30.5 0 61" fill="none" stroke="none" stroke-width="2"></path><g fill="#14beff" stroke-width="1"><rect x="8" y="8" rx="5.3" ry="5.3" width="61" height="61"></rect><path d="M 11.533333333333333 8 q 26.96666666666667 -9 53.93333333333334 0 M 11.533333333333333 69 q 26.96666666666667 9 53.93333333333334 0 M 8 11.533333333333333 q -9 26.96666666666667 0 53.93333333333334 M 69 11.533333333333333 q 9 26.96666666666667 0 53.93333333333334"></path></g></svg>
+	        		<span class="count-num">3</span>
+	    		</div>
+	    	</div>
+	        <div class="row">
+	        	<button class="sbt">Submit</button>
+	        	<button class="got-it">Got it</button>
+	        </div>
+	        <div class="row explanation"><h1>Explanation</h1></div>
+	        <div class="row hidden-div">
+	        	<div class="review-div">
+	        		<img src="review.png" class="review-img">
+	        		<div class="row exp-top">
+			    		<audio id="player" src="Kalimba.mp3"></audio>
+			    		<div class="audio-button">
+					        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+					    </div>
+					    <h3 class="sub-question">Count the ducks. Click each duck to keep track as you count</h3>
+			    	</div>
+
+			    	<div class="row">
+			        	<div class="col-sm-3">
+			        		<img src="duck.svg" class="duck-disable-class">
+			        		
+			        	</div>
+			        	<div class="col-sm-3">
+			        		<img src="duck.svg" class="duck-disable-class">
+			        	</div>
+			        	<div class="col-sm-3">
+			        		<img src="duck.svg" class="duck-disable-class">
+			        	</div>
+			        </div>
+
+	        		<div class="row exp-top">
+			    		<audio id="player" src="Kalimba.mp3"></audio>
+			    		<div class="audio-button">
+					        <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+					    </div>
+					    <h3 class="second-question">How many ducks are there?</h3>
+			    	</div>
+			    	<div class="row" style="margin-left: 20px;">
+			    		<div class="col-sm-2 duck-col-2-1">
+			        		<svg width="77" height="77" focusable="false"><path d="M 8 8 q 30.5 -10.766666666666666 61 0 M 8 69 q 30.5 10.766666666666666 61 0 M 8 8 q -10.766666666666666 30.5 0 61 M 69 8 q 10.766666666666666 30.5 0 61" fill="none" stroke="none" stroke-width="2"></path><g fill="#14beff" stroke-width="1"><rect x="8" y="8" rx="5.3" ry="5.3" width="61" height="61"></rect><path d="M 11.533333333333333 8 q 26.96666666666667 -9 53.93333333333334 0 M 11.533333333333333 69 q 26.96666666666667 9 53.93333333333334 0 M 8 11.533333333333333 q -9 26.96666666666667 0 53.93333333333334 M 69 11.533333333333333 q 9 26.96666666666667 0 53.93333333333334"></path></g></svg>
+			        		<span class="count-num">1</span>
+			    		</div>
+			    		<div class="col-sm-2 duck-col-2-1">
+			        		<svg width="77" height="77" focusable="false"><path d="M 8 8 q 30.5 -10.766666666666666 61 0 M 8 69 q 30.5 10.766666666666666 61 0 M 8 8 q -10.766666666666666 30.5 0 61 M 69 8 q 10.766666666666666 30.5 0 61" fill="none" stroke="none" stroke-width="2"></path><g fill="#14beff"  stroke-width="1"><rect x="8" y="8" rx="5.3" ry="5.3" width="61" height="61"></rect><path d="M 11.533333333333333 8 q 26.96666666666667 -9 53.93333333333334 0 M 11.533333333333333 69 q 26.96666666666667 9 53.93333333333334 0 M 8 11.533333333333333 q -9 26.96666666666667 0 53.93333333333334 M 69 11.533333333333333 q 9 26.96666666666667 0 53.93333333333334"></path></g></svg>
+			        		<span class="count-num">2</span>
+			    		</div>
+			    		<div class="col-sm-2 duck-col-2-1">
+			        		<svg width="77" height="77" focusable="false"><path d="M 8 8 q 30.5 -10.766666666666666 61 0 M 8 69 q 30.5 10.766666666666666 61 0 M 8 8 q -10.766666666666666 30.5 0 61 M 69 8 q 10.766666666666666 30.5 0 61" fill="none" stroke="none" stroke-width="2"></path><g fill="#14beff" stroke-width="1"><rect x="8" y="8" rx="5.3" ry="5.3" width="61" height="61"></rect><path d="M 11.533333333333333 8 q 26.96666666666667 -9 53.93333333333334 0 M 11.533333333333333 69 q 26.96666666666667 9 53.93333333333334 0 M 8 11.533333333333333 q -9 26.96666666666667 0 53.93333333333334 M 69 11.533333333333333 q 9 26.96666666666667 0 53.93333333333334"></path></g></svg>
+			        		<span class="count-num">3</span>
+			    		</div>
+			    	</div>
+
+
+
+	        		<div class="row exp-top">
+					    <h3 class="sub-question" style="color: #77a200;">You answered:</h3>
+			    	</div>
+	        		<div class="duck-choose-num"></div>
+	        	</div>
+	        	<div class="review-div" style="margin-top: 15px;">
+	        		<img src="solve.png" class="review-img">
+	        		<h3 style="margin-left: 30px;">Count the ducks</h3>
+	        		<div class="row">
+			        	<div class="col-sm-3">
+			        		<img src="duck.svg" class="duck-disable-class">
+			        		
+			        	</div>
+			        	<div class="col-sm-3">
+			        		<img src="duck.svg" class="duck-disable-class">
+			        	</div>
+			        	<div class="col-sm-3">
+			        		<img src="duck.svg" class="duck-disable-class">
+			        	</div>
+			        </div>
+			        <span style="font-size: 25px;margin-left: 35px;">There are 3 ducks.</span>
+	        	</div>
+	        </div>
+	        <button class="got-it1">Got it</button>
+	    </div>
+	    <div class="col-sm-2">
+	      <div class="clock" style="margin:2em;zoom: 0.55;"></div>
+			<div class="message"></div>
+	    </div>
+	  </div>
+	  <div id="wonderful">
+	  	<i class="fa fa-check" style="font-size: 60px;color: green;float: left;"></i>
+	  	<h4 style="font-size: 60px;color: #00abff;    margin-top: 0px;"> Wonderful </h4>
+	  </div>
+	</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
+<script src="main.js"></script>
+<script src="flipclock.js"></script>
+</html>
+
+
+
+

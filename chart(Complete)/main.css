@@ -1,0 +1,242 @@
+
+body {
+	margin: auto;
+}
+.ballon {
+	width: 50px;
+	position: absolute;
+	left: 1200px;
+}
+.question-info-h3 {
+	font-size: 15px;
+	color: white;
+}
+.question-info-h2 {
+	font-size: 35px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 58px;
+    font-weight: 700;
+}
+.question-info-header {
+	width: 70%;
+	height: 40px;
+	text-align: center;
+	box-shadow: 0 1px 17px 0 rgb(223, 116, 243), 0 -3px 25px 0 rgb(228, 221, 133);
+	margin-bottom: 5px;
+}
+.question-info-content{
+	width: 70%;
+	height: 85px;
+	text-align: center;
+	background-color: #e6e2e2;
+	margin-bottom: 5px;
+	border-radius: 55px;
+	box-shadow: 0 1px 3px 0 rgb(81, 92, 179), 0 -3px 2px 0 rgb(234, 195, 217);
+}
+.margin-sm {
+	width: 29.666667% !important;
+	padding-left: 0px !important;
+}
+.res:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.duck-class {
+	width: 100%;
+}
+.duck-disable-class {
+	width: 100%;
+}
+.duck-class:hover {
+	cursor: pointer;
+	opacity: 0.3;
+}
+.count-num {
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 4%;
+    left: 38%;
+}
+.duck-col-2 {
+	width: 10.6% !important;
+}
+.duck-col-2:hover {
+	cursor: pointer;
+}
+.duck-num {
+	position: absolute;
+	top: calc(50% - 0px);
+	left: calc(50% - 13px);
+}
+.duck-real-num {
+	position: absolute;
+	top: calc(50% - 4px);
+	left: calc(50% + 2px);
+	color: white;
+	font-size: 45px;
+}
+.jumbotron {
+	padding: 0 0 !important;
+}
+.duck-correct-num {
+	font-size: 40px;
+	display: none;
+}
+.duck-choose-num {
+	font-size: 40px;
+	margin-left: 35px;
+}
+
+.second-question {
+	float: left;
+	margin-top: 0px;
+}
+
+.duck-col-2-1 {
+	width: 10.6% !important;
+}
+
+.number {
+	font-size: 35px;
+    position: absolute;
+    left: calc(50% - 14px);
+    top: calc(50% - 18px);
+    color: white;
+}
+.responsive:hover {
+	cursor: pointer;
+}
+.exp-top {
+	padding-top: 24px;
+    padding-left: 45px;
+    padding-bottom: 5px;
+}
+.review-img {
+	position: absolute;
+	margin-left: -10px;
+	margin-top: 10px;
+	z-index: 1;
+}
+.review-div {
+	border: 1px solid #e3dbff;
+	padding-bottom: 25px;
+}
+.explanation {
+	display: none;
+}
+.sbt {
+	margin-top: 30px;
+	width: 135px;
+	height: 35px;
+	color: white;
+	border: none;
+	background-color: #7ebb00;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+.sbt:hover {
+	background-color: #9de20e;
+}
+.got-it {
+	margin-top: 30px;
+	width: 135px;
+	height: 35px;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	background-color: #7ebb00;
+	display: none;
+	float: right;
+}
+.got-it1 {
+	margin-top: 30px;
+	width: 135px;
+	height: 35px;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	background-color: #7ebb00;
+	display: none;
+	float: left;
+	margin-bottom: 20px;
+}
+.got-it:hover {
+	background-color: #9de20e;
+}
+.audio-button {
+	float: left;
+	width: 40px;
+}
+.main-question {
+	float: left;
+	margin-top: 0px;
+}
+.sub-question {
+	float: left;
+	margin-top: 4px;
+	font-size: 20px !important;
+}
+.sub-div {
+	position: relative;
+	width: 100%;
+	padding-top: 100%;
+	border: solid 2px;
+	border-radius: 5px;
+	border-color: #d3f3fe;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.mouse-over {
+	border-color: #a1d6e8;
+	border-width: 4px;
+    margin-bottom: -4px;
+}
+.click-state {
+	border-color: #03abe4;
+	border-width: 4px;
+    margin-bottom: -4px;
+}
+.one-img {
+	width: 51px;
+    height: 51px;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+}
+.two-first-img {
+	width: 51px;
+    height: 51px;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(33% - 25px);
+}
+.two-second-img {
+	width: 51px;
+    height: 51px;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(66% - 25px);
+}
+.failed-h1 {
+	color: #00adef;
+}
+.hidden-div {
+	display: none;
+}
+
+
+#wonderful{
+	background-color: #fcfff5;
+	border: 1px solid green;
+	position: absolute;
+	width: 600px;
+	height: 200px;
+	top: 39%;
+	left: 16%;
+	display: none;
+	    padding: 60px 104px;
+	box-shadow: -1px 1px 6px 0 rgba(81,116,25,.49);
+}
